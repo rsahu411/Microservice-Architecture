@@ -1,0 +1,47 @@
+server:
+  port: 8088
+
+spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/microservices
+#    username: root
+#    password: ROOT
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    database: MYSQL
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#      dialect: org.hibernate.dialect.MySQL5Dialect
+  application:
+    name: RATING-SERVICE
+  config:
+    import: optional:configserver:http://localhost:8085
+
+
+#Eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+#  instance:
+#    prefer-ip-address: true
+
+
+
+#server.port=8088
+#spring.datasource.url=jdbc:mysql://localhost:3306/microservices
+#spring.datasource.username=root
+#spring.datasource.password=ROOT
+#spring.datasource.driverClassName = com.mysql.cj.jdbc.Driver
+#spring.jpa.database = MYSQL
+#spring.jpa.show-sql = true
+#spring.jpa.hibernate.ddl-auto = update
+#spring.jpa.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+#
+#spring.application.name= RATING-SERVICE
+#Eureka.client.fetch-registry=true
+#Eureka.instance.prefer-ip-address=true
+#Eureka.client.register-with-eureka=true
+#Eureka.client.service-url.defaultZone= http://localhost:8761/eureka
